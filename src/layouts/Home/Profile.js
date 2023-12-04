@@ -20,14 +20,14 @@ const ProfileText = ({ visible, titleId }) => (
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
       My name is Schmid Payen. I am a Full Stack Web Developer located in New York, USA.
-      I'm highly passionate when it comes to learning all sorts of things. That's what
+      I`m highly passionate when it comes to learning all sorts of things. That`s what
       keeps me going in life.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I look at coding as a never-ending challenge, and I won't slow down until I feel
+      I look at coding as a never-ending challenge, and I won`t slow down until I feel
       like I achieved a level of mastery. Then the real fun begins. Until that moment,
-      it's all about self-discipline, continuous learning, and tremendous patience. I, in
-      one word: "DRIVEN".
+      it`s all about self-discipline, continuous learning, and tremendous patience. I, in
+      one word: `DRIVEN`.
     </Text>
   </Fragment>
 );
