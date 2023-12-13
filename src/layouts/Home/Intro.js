@@ -110,7 +110,7 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
                 <DecoderText text="7+ experiences" delay={300} />
               </h1>
             </header>
-            <RouterLink href="/#project-1">
+            <RouterLink href="/#about">
               <a
                 className={styles.scrollIndicator}
                 data-status={status}
@@ -120,7 +120,7 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
                 <VisuallyHidden>Scroll to projects</VisuallyHidden>
               </a>
             </RouterLink>
-            <RouterLink href="/#project-1">
+            <RouterLink href="/#about">
               <a
                 className={styles.mobileScrollIndicator}
                 data-status={status}

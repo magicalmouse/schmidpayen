@@ -16,6 +16,7 @@ import { Mention } from 'layouts/Home/Mention';
 import { ProjectSummary } from 'layouts/Home/ProjectSummary';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
+import { Contact } from 'pages/contact/Contact';
 
 const disciplines = ['Developer', 'Prototyper', 'Animator', 'Illustrator', 'Modder'];
 
@@ -28,6 +29,7 @@ export const Home = () => {
   const projectThree = useRef();
   const details = useRef();
   const slide = useRef();
+  const contact = useRef();
 
   useEffect(() => {
     const sections = [intro, projectOne, projectTwo, projectThree, details, slide];
@@ -78,11 +80,56 @@ export const Home = () => {
         disciplines={disciplines}
         scrollIndicatorHidden={scrollIndicatorHidden}
       />
+      <Profile
+        sectionRef={details}
+        visible={visibleSections.includes(details.current)}
+        id="about"
+      />
       <ProjectSummary
-        id="project-1"
+        id="skill"
+        sectionRef={projectThree}
+        visible={visibleSections.includes(projectThree.current)}
+        index={1}
+        title="Professional skills"
+        description="A senior web developer combines technical expertise with creativity, problem-solving skills, and a passion for delivering high-quality web solutions."
+        buttonText="View Skills"
+        buttonLink="/projects/slice#skilldetail"
+        model={{
+          type: 'laptop',
+          alt: 'Annotating a biomedical image in the Slice app',
+          textures: [
+            {
+              srcSet: [proSkill, proSkillLarge],
+              placeholder: proSkill,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="service"
+        sectionRef={projectThree}
+        visible={visibleSections.includes(projectThree.current)}
+        index={2}
+        title="My Services"
+        description="What I can do is.."
+        buttonText="View Services"
+        buttonLink="/projects/slice#servicedetail"
+        model={{
+          type: 'laptop',
+          alt: 'Annotating a biomedical image in the Slice app',
+          textures: [
+            {
+              srcSet: [proSkill, proSkillLarge],
+              placeholder: proSkill,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="work"
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
-        index={1}
+        index={3}
         title="Web Developer Extraordinaire"
         description="Unleash your creativity and technical prowess as you learn the fundamentals of HTML, CSS, and JavaScript, laying the foundation for crafting visually stunning and interactive websites.Designing a platform to help educators build better online courseware"
         buttonText="View project"
@@ -99,11 +146,11 @@ export const Home = () => {
         }}
       />
       <ProjectSummary
-        id="project-2"
+        id="work-2"
         alternate
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
-        index={2}
+        index={4}
         title="The Art of App Development"
         description="Design and development for a video game tracking app built in React Native"
         buttonText="View website"
@@ -123,32 +170,15 @@ export const Home = () => {
           ],
         }}
       />
-      <ProjectSummary
-        id="project-3"
-        sectionRef={projectThree}
-        visible={visibleSections.includes(projectThree.current)}
-        index={3}
-        title="Professional skills"
-        description="A senior web developer combines technical expertise with creativity, problem-solving skills, and a passion for delivering high-quality web solutions."
-        buttonText="View Skills"
-        buttonLink="/projects/slice"
-        model={{
-          type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
-          textures: [
-            {
-              srcSet: [proSkill, proSkillLarge],
-              placeholder: proSkill,
-            },
-          ],
-        }}
+      <Mention
+        sectionRef={slide}
+        id="testimonial"
+        index={5}
+        title="Testimonial"
+        description="They say about me"
       />
-      <Profile
-        sectionRef={details}
-        visible={visibleSections.includes(details.current)}
-        id="details"
-      />
-      <Mention sectionRef={slide} id="slide" />
+
+      <Contact sectionRef={contact} id="contact"></Contact>
       <Footer />
     </div>
   );

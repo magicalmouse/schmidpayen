@@ -31,7 +31,7 @@ const roles = [
   // 'App Development',
   // 'UI/UX Design',
 ];
-const title1 = 'What I work with My Skills';
+const title1 = 'What Can I serve';
 const description1 = '';
 const roles1 = [
   // 'Blockchain Development',
@@ -53,7 +53,12 @@ export const Slice = () => {
           placeholder={backgroundSprLarge}
           opacity={0.8}
         />
-        <ProjectHeader title={title} description={description} roles={roles} />
+        <ProjectHeader
+          title={title}
+          description={description}
+          roles={roles}
+          id={'skilldetail'}
+        />
         <ProjectSection padding="top">
           <ProjectSectionContent>
             {/* {skills.map(({ label, image }, index) => (
@@ -75,7 +80,12 @@ export const Slice = () => {
             />
           </ProjectSectionContent>
         </ProjectSection>
-        <ProjectHeader title={title1} description={description1} roles={roles1} />
+        <ProjectHeader
+          title={title1}
+          description={description1}
+          roles={roles1}
+          id={'servicedetail'}
+        />
         <ProjectSection padding="top">
           <ProjectSectionContent>
             {/* {skills.map(({ label, image }, index) => (

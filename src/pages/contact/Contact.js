@@ -13,9 +13,10 @@ import { Transition } from 'components/Transition';
 import { useFormInput } from 'hooks';
 import { useRef, useState } from 'react';
 import { cssProps, msToNum, numToMs } from 'utils/style';
+import { socialLinks } from '../../components/Navbar/navData';
 import styles from './Contact.module.css';
 
-export const Contact = () => {
+export const Contact = ({ id }) => {
   const errorRef = useRef();
   const email = useFormInput('');
   const message = useFormInput('');
@@ -64,7 +65,7 @@ export const Contact = () => {
   };
 
   return (
-    <Section className={styles.contact}>
+    <Section className={styles.contact} id={id}>
       <Meta
         title="Contact"
         description="Send me a message if you’re interested in discussing a project or if you just want to say hi"
@@ -176,10 +177,29 @@ export const Contact = () => {
           </div>
         )}
       </Transition>
-      <Footer className={styles.footer} />
+      {/* <Footer className={styles.footer} /> */}
+      <NavbarIcons desktop />
     </Section>
   );
 };
+
+const NavbarIcons = ({ desktop }) => (
+  <div className={styles.navIcons}>
+    {socialLinks.map(({ label, url, icon }) => (
+      <a
+        key={label}
+        data-navbar-item={desktop || undefined}
+        className={styles.navIconLink}
+        aria-label={label}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Icon className={styles.navIcon} icon={icon} />
+      </a>
+    ))}
+  </div>
+);
 
 function getStatusError({
   status,

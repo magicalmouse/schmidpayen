@@ -167,7 +167,6 @@ export const Navbar = () => {
             </RouterLink>
           ))}
         </div>
-        <NavbarIcons desktop />
       </nav>
       <Transition unmount in={menuOpen} timeout={msToNum(tokens.base.durationL)}>
         {visible => (
@@ -189,7 +188,6 @@ export const Navbar = () => {
                 </a>
               </RouterLink>
             ))}
-            <NavbarIcons />
             <ThemeToggle isMobile />
           </nav>
         )}
@@ -198,21 +196,3 @@ export const Navbar = () => {
     </header>
   );
 };
-
-const NavbarIcons = ({ desktop }) => (
-  <div className={styles.navIcons}>
-    {socialLinks.map(({ label, url, icon }) => (
-      <a
-        key={label}
-        data-navbar-item={desktop || undefined}
-        className={styles.navIconLink}
-        aria-label={label}
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Icon className={styles.navIcon} icon={icon} />
-      </a>
-    ))}
-  </div>
-);

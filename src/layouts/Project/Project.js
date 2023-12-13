@@ -19,9 +19,10 @@ export function ProjectHeader({
   url,
   roles,
   className,
+  id,
 }) {
   return (
-    <Section className={classes(styles.header, className)} as="section">
+    <Section className={classes(styles.header, className)} as="section" id={id}>
       <div
         className={styles.headerContent}
         style={cssProps({ initDelay: numToMs(initDelay) })}
