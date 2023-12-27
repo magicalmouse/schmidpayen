@@ -28,12 +28,12 @@ export const navLinks = [
 export const socialLinks = [
   {
     label: 'Twitter',
-    url: 'https://twitter.com/schmid_payen',
+    url: 'https://twitter.com/nadir_abasov',
     icon: 'twitter',
   },
   {
     label: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/schmid-payen-17695a120/',
+    url: 'https://www.linkedin.com/in/nadir-abasov-473387296/',
     icon: 'linkedin',
   },
   {

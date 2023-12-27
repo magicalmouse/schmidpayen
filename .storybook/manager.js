@@ -5,7 +5,7 @@ addons.setConfig({
   theme: {
     ...themes.dark,
     brandImage: 'https://magehire.com/icon.svg',
-    brandTitle: 'Schmid Payen Components',
+    brandTitle: 'Nadir Abasov Components',
     brandUrl: 'https://magehire.com',
   },
 });

@@ -1,4 +1,4 @@
-service: Schmid-portfolio
+service: Nadir-portfolio
 
 provider:
   name: aws
