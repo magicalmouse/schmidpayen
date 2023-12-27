@@ -19,9 +19,9 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      My name is Nadir Abasov. I am a Full Stack Web Developer located in Baku,
-      Azerbaijan. I`m highly passionate when it comes to learning all sorts of things.
-      That`s what keeps me going in life.
+      My name is Schmid Payen. I am a Full Stack Web Developer located in New York, USA.
+      I`m highly passionate when it comes to learning all sorts of things. That`s what
+      keeps me going in life.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
       I look at coding as a never-ending challenge, and I won`t slow down until I feel

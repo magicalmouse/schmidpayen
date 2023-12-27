@@ -8,11 +8,11 @@ import { socialLinks } from '../../components/Navbar/navData';
 export const Footer = ({ className }) => (
   <footer className={classes(styles.footer, className)}>
     <Text size="s" align="center">
-      <span className={styles.date}>{`© ${new Date().getFullYear()} Nadir Abasov.`}</span>
+      <span className={styles.date}>{`© ${new Date().getFullYear()} Schmid Payen.`}</span>
       <Link
         secondary
         className={styles.link}
-        href="https://mailto:Nadir@magehire.com/"
+        href="https://mailto:schmid@magehire.com/"
         target="_blank"
       >
         MageHire
